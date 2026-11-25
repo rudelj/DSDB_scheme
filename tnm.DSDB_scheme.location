@@ -1,0 +1,4 @@
+location /DSDB_scheme {
+    alias /var/www/html/DSDB_scheme;
+    try_files $uri $uri/ /DSDB_scheme/index.html;
+}
