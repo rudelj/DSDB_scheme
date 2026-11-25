@@ -1,4 +1,23 @@
-location /DSDB_scheme {
-    alias /var/www/html/DSDB_scheme;
+# --- Restriction IP DSDB Scheme (VPN & Réseau Local ETSI) ---
+location = /DSDB_scheme {
+    return 301 /DSDB_scheme/;
+}
+
+location = /dsdb_scheme {
+    return 301 /DSDB_scheme/;
+}
+
+location ^~ /dsdb_scheme/ {
+    return 301 /DSDB_scheme/;
+}
+
+location /DSDB_scheme/ {
+    allow 10.0.0.0/8;
+    allow 172.30.6.0/23;
+    allow 172.16.0.0/12;
+    allow 127.0.0.1;
+    deny all;
+
+    index index.html;
     try_files $uri $uri/ /DSDB_scheme/index.html;
 }
