@@ -1,0 +1,1088 @@
+title: ETSI DSDB — Directory Services Database
+connection:
+  dialect: postgres
+  schema: dbo
+  envVar: DATABASE_URL
+hiddenFkColumns: []
+domains:
+  organizations:
+    name: Organisations & Adhésion
+    short: ORGA
+    color: '#2563eb'
+  persons:
+    name: Personnes & Délégations
+    short: PERS
+    color: '#7c3aed'
+  technical_bodies:
+    name: Organes Techniques (TBs)
+    short: TB
+    color: '#059669'
+  meetings:
+    name: Réunions & Événements
+    short: MTG
+    color: '#d97706'
+  work_programme:
+    name: Programme de Normalisation (WPM)
+    short: WPM
+    color: '#dc2626'
+  referentials:
+    name: Référentiels & Nomenclatures
+    short: REF
+    color: '#4b5563'
+    neutral: true
+  audit_logs:
+    name: Historique & Logs d'Audit
+    short: LOG
+    color: '#64748b'
+    neutral: true
+tables:
+  Body:
+    domain: technical_bodies
+    role: hub
+    description: Comités techniques, groupes de travail et partenariats (TBs, WGs,
+      ISGs)
+    label: Body
+  BodyFamily:
+    domain: technical_bodies
+    role: master
+    description: 'Nomenclature de classification des organes: BodyFamily'
+    label: BodyFamily
+  BodyRemark:
+    domain: technical_bodies
+    role: child
+    description: 'Paramètres de l''organe technique: BodyRemark'
+    label: BodyRemark
+  BodyState:
+    domain: technical_bodies
+    role: master
+    description: 'Nomenclature de classification des organes: BodyState'
+    label: BodyState
+  BodyType:
+    domain: technical_bodies
+    role: master
+    description: 'Nomenclature de classification des organes: BodyType'
+    label: BodyType
+  BodyTypeFamily:
+    domain: technical_bodies
+    role: join
+    description: 'Association de typologie d''organe: BodyTypeFamily'
+    label: BodyTypeFamily
+  3GPP_K4_Prints:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: 3GPP_K4_Prints'
+    label: 3GPP_K4_Prints
+  3GPP_K4_Registrations:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: 3GPP_K4_Registrations'
+    label: 3GPP_K4_Registrations
+  3GPP_K4_Scans:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: 3GPP_K4_Scans'
+    label: 3GPP_K4_Scans
+  ATTENDANCE_GROUP_FEE:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: ATTENDANCE_GROUP_FEE'
+    label: ATTENDANCE_GROUP_FEE
+  BodiesMeetingTypes:
+    domain: technical_bodies
+    role: join
+    description: 'Association de typologie d''organe: BodiesMeetingTypes'
+    label: BodiesMeetingTypes
+  CALENDAR:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: CALENDAR'
+    label: CALENDAR
+  CL_Emails:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: CL_Emails'
+    label: CL_Emails
+  CONTACT_PERSON_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour CONTACT_PERSON_DELETE
+    label: CONTACT_PERSON_DELETE
+  CONTACT_PERSON_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour CONTACT_PERSON
+    label: CONTACT_PERSON_LOGS
+  CONTACT_PERSON_OLD:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: CONTACT_PERSON_OLD'
+    label: CONTACT_PERSON_OLD
+  Contribution_Notification:
+    domain: work_programme
+    role: tx
+    description: Notification et soumission de contributions techniques
+    label: Contribution_Notification
+  dtproperties:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: dtproperties'
+    label: dtproperties
+  ETSI_DEPT:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: ETSI_DEPT'
+    label: ETSI_DEPT
+  ETSI_DEPT_LOGS_TO_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ETSI_DEPT_TO_DELETE
+    label: ETSI_DEPT_LOGS_TO_DELETE
+  ETSI_STRUCT:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: ETSI_STRUCT'
+    label: ETSI_STRUCT
+  Events:
+    domain: meetings
+    role: hub
+    description: Événements institutionnels majeurs et ateliers
+    label: Events
+  GENERAL_REMARK_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour GENERAL_REMARK
+    label: GENERAL_REMARK_LOGS
+  GENERAL_REMARK_OLD:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: GENERAL_REMARK_OLD'
+    label: GENERAL_REMARK_OLD
+  HISTORY_DUPLICATE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour HISTORY_DUPLICATE
+    label: HISTORY_DUPLICATE
+  IND_Announc:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: IND_Announc'
+    label: IND_Announc
+  IND_Doc:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: IND_Doc'
+    label: IND_Doc
+  IND_Interface:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: IND_Interface'
+    label: IND_Interface
+  IND_Meeting:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: IND_Meeting'
+    label: IND_Meeting
+  MAIL_TEXT:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: MAIL_TEXT'
+    label: MAIL_TEXT
+  MAINT_3GUCheckIn:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: MAINT_3GUCheckIn'
+    label: MAINT_3GUCheckIn
+  MAINT_DOCSET_ToCreate:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: MAINT_DOCSET_ToCreate'
+    label: MAINT_DOCSET_ToCreate
+  MAINT_MultipleCheckins:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: MAINT_MultipleCheckins'
+    label: MAINT_MultipleCheckins
+  marker:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: marker'
+    label: marker
+  MEETING_ACCESSIBILITY_REQUIREMENTS:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MEETING_ACCESSIBILITY_REQUIREMENTS'
+    label: MEETING_ACCESSIBILITY_REQUIREMENTS
+  MEETING_NOTES:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MEETING_NOTES'
+    label: MEETING_NOTES
+  MEETING_PT:
+    domain: meetings
+    role: join
+    description: 'Liaison meeting / ressource: MEETING_PT'
+    label: MEETING_PT
+  MEETING_REGISTER_REQUEST:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MEETING_REGISTER_REQUEST'
+    label: MEETING_REGISTER_REQUEST
+  MEETING_RESPONSIBLE:
+    domain: meetings
+    role: join
+    description: 'Liaison meeting / ressource: MEETING_RESPONSIBLE'
+    label: MEETING_RESPONSIBLE
+  MEETING_RESPONSIBLE_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETING_RESPONSIBLE
+    label: MEETING_RESPONSIBLE_LOGS
+  MEETING_ROOM:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MEETING_ROOM'
+    label: MEETING_ROOM
+  MEETING_ROOM_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETING_ROOM_DELETE
+    label: MEETING_ROOM_DELETE
+  MEETING_ROOM_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETING_ROOM
+    label: MEETING_ROOM_LOGS
+  MEETING_TB:
+    domain: meetings
+    role: join
+    description: 'Liaison meeting / ressource: MEETING_TB'
+    label: MEETING_TB
+  MEETING_TB_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETING_TB_DELETE
+    label: MEETING_TB_DELETE
+  MEETING_TB_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETING_TB
+    label: MEETING_TB_LOGS
+  MeetingPayment:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MeetingPayment'
+    label: MeetingPayment
+  MEETINGS:
+    domain: meetings
+    role: hub
+    description: Sessions, assemblées générales et réunions de travail
+    label: MEETINGS
+  MEETINGS_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETINGS_DELETE
+    label: MEETINGS_DELETE
+  MEETINGS_HARDSHIP_EXEMPTION:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MEETINGS_HARDSHIP_EXEMPTION'
+    label: MEETINGS_HARDSHIP_EXEMPTION
+  MEETINGS_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MEETINGS
+    label: MEETINGS_LOGS
+  MERGE_ORGANISATION_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MERGE_ORGANISATION
+    label: MERGE_ORGANISATION_HISTORY
+  MERGE_PERSON_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MERGE_PERSON
+    label: MERGE_PERSON_HISTORY
+  MERGED_PERSON:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: MERGED_PERSON'
+    label: MERGED_PERSON
+  MTG_ACTION:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MTG_ACTION'
+    label: MTG_ACTION
+  MTG_ACTION_LIST:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MTG_ACTION_LIST'
+    label: MTG_ACTION_LIST
+  MTG_CONTACT:
+    domain: meetings
+    role: join
+    description: 'Liaison meeting / ressource: MTG_CONTACT'
+    label: MTG_CONTACT
+  MTG_CONTACT_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MTG_CONTACT_DELETE
+    label: MTG_CONTACT_DELETE
+  MTG_CONTACT_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MTG_CONTACT
+    label: MTG_CONTACT_LOGS
+  MTG_EVENT_LOCATION_INFO:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MTG_EVENT_LOCATION_INFO'
+    label: MTG_EVENT_LOCATION_INFO
+  MTG_Roles_Group:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MTG_Roles_Group'
+    label: MTG_Roles_Group
+  MTG_USERS_ACCESSIBILITY_REQUIREMENTS:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: MTG_USERS_ACCESSIBILITY_REQUIREMENTS'
+    label: MTG_USERS_ACCESSIBILITY_REQUIREMENTS
+  MTG_USERS_PRESENCE:
+    domain: meetings
+    role: tx
+    description: Émargement, présence physique et distancielle des délégués
+    label: MTG_USERS_PRESENCE
+  MTG_USERS_PRESENCE_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour MTG_USERS_PRESENCE
+    label: MTG_USERS_PRESENCE_LOGS
+  MTG_USERS_PRESENCE_REP_ORGS_STATUS:
+    domain: meetings
+    role: child
+    description: Calcul des droits de représentation et quorum de séance
+    label: MTG_USERS_PRESENCE_REP_ORGS_STATUS
+  OC_Emails:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: OC_Emails'
+    label: OC_Emails
+  OFF_CONTACT_EMAIL:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: OFF_CONTACT_EMAIL'
+    label: OFF_CONTACT_EMAIL
+  OLD_TAB_ORGA_WITHDRAWAL_REASONS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour OLD_TAB_ORGA_WITHDRAWAL_REASONS
+    label: OLD_TAB_ORGA_WITHDRAWAL_REASONS
+  ORGA_EVOLUTION:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGA_EVOLUTION'
+    label: ORGA_EVOLUTION
+  ORGA_GA_DECISION_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_GA_DECISION
+    label: ORGA_GA_DECISION_LOGS
+  Orga_Group:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Orga_Group'
+    label: Orga_Group
+  Orga_Group_Association:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Orga_Group_Association'
+    label: Orga_Group_Association
+  Orga_Group_Contact:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Orga_Group_Contact'
+    label: Orga_Group_Contact
+  ORGA_IN_LIST:
+    domain: organizations
+    role: join
+    description: Rattachement d'organisations à des listes institutionnelles
+    label: ORGA_IN_LIST
+  ORGA_IN_LIST_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_IN_LIST
+    label: ORGA_IN_LIST_LOGS
+  ORGA_INV_PENALTY:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGA_INV_PENALTY'
+    label: ORGA_INV_PENALTY
+  ORGA_INVOICE_HIST:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_INVOICE_HIST
+    label: ORGA_INVOICE_HIST
+  ORGA_LINKS:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGA_LINKS'
+    label: ORGA_LINKS
+  ORGA_LINKS_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_LINKS_DELETE
+    label: ORGA_LINKS_DELETE
+  ORGA_LIST:
+    domain: organizations
+    role: join
+    description: Rattachement d'organisations à des listes institutionnelles
+    label: ORGA_LIST
+  ORGA_LIST_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_LIST
+    label: ORGA_LIST_LOGS
+  ORGA_STATUS_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_STATUS_DELETE
+    label: ORGA_STATUS_DELETE
+  ORGA_STATUS_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGA_STATUS
+    label: ORGA_STATUS_LOGS
+  ORGA_STATUS_OLD:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGA_STATUS_OLD'
+    label: ORGA_STATUS_OLD
+  ORGANISATION:
+    domain: organizations
+    role: hub
+    description: Membres, entreprises, universités et partenaires de l'ETSI
+    label: ORGANISATION
+  ORGANISATION__LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGANISATION_
+    label: ORGANISATION__LOGS
+  ORGANISATION_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGANISATION_DELETE
+    label: ORGANISATION_DELETE
+  ORGANISATION_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ORGANISATION
+    label: ORGANISATION_HISTORY
+  ORGANISATION_VAT:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGANISATION_VAT'
+    label: ORGANISATION_VAT
+  PERSON:
+    domain: persons
+    role: hub
+    description: Délégués, représentants d'adhérents, présidents et experts
+    label: PERSON
+  PERSON__LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_
+    label: PERSON__LOGS
+  PERSON_ADSI:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: PERSON_ADSI'
+    label: PERSON_ADSI
+  PERSON_ADSI_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_ADSI_DELETE
+    label: PERSON_ADSI_DELETE
+  PERSON_delete:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_delete
+    label: PERSON_delete
+  PERSON_GROUP:
+    domain: persons
+    role: master
+    description: Listes de distribution et groupes de contacts
+    label: PERSON_GROUP
+  PERSON_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON
+    label: PERSON_HISTORY
+  PERSON_IN_LIST:
+    domain: persons
+    role: join
+    description: Inscriptions aux listes de diffusion et collèges de comités
+    label: PERSON_IN_LIST
+  PERSON_IN_LIST_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_IN_LIST_DELETE
+    label: PERSON_IN_LIST_DELETE
+  PERSON_IN_LIST_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_IN_LIST
+    label: PERSON_IN_LIST_LOGS
+  PERSON_LIST:
+    domain: persons
+    role: master
+    description: Listes de distribution et groupes de contacts
+    label: PERSON_LIST
+  PERSON_LIST_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_LIST_DELETE
+    label: PERSON_LIST_DELETE
+  PERSON_LIST_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_LIST
+    label: PERSON_LIST_LOGS
+  PERSON_NOT_CONFIRMED:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: PERSON_NOT_CONFIRMED'
+    label: PERSON_NOT_CONFIRMED
+  PERSON_NOT_CONFIRMED_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_NOT_CONFIRMED_DELETE
+    label: PERSON_NOT_CONFIRMED_DELETE
+  PERSON_PRIVACY:
+    domain: persons
+    role: child
+    description: Préférences de confidentialité et consentement RGPD
+    label: PERSON_PRIVACY
+  PERSON_PRIVACY_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour PERSON_PRIVACY
+    label: PERSON_PRIVACY_LOGS
+  Person_RedList:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: Person_RedList'
+    label: Person_RedList
+  REG_NOT_CONFIRMED:
+    domain: meetings
+    role: child
+    description: 'Détail de gestion des réunions: REG_NOT_CONFIRMED'
+    label: REG_NOT_CONFIRMED
+  REG_NOT_CONFIRMED_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour REG_NOT_CONFIRMED_DELETE
+    label: REG_NOT_CONFIRMED_DELETE
+  REPRESENTING_ORGA_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour REPRESENTING_ORGA_DELETE
+    label: REPRESENTING_ORGA_DELETE
+  REPRESENTING_ORGA_OLD:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: REPRESENTING_ORGA_OLD'
+    label: REPRESENTING_ORGA_OLD
+  ROOM:
+    domain: meetings
+    role: master
+    description: Référentiel des salles et configurations de réunion
+    label: ROOM
+  ROOM_LAYOUT:
+    domain: meetings
+    role: master
+    description: Référentiel des salles et configurations de réunion
+    label: ROOM_LAYOUT
+  ROOM_REQUEST:
+    domain: meetings
+    role: tx
+    description: Réservations logistiques des salles et équipements
+    label: ROOM_REQUEST
+  ROOM_REQUEST_EQUIPMENT:
+    domain: meetings
+    role: tx
+    description: Réservations logistiques des salles et équipements
+    label: ROOM_REQUEST_EQUIPMENT
+  ROOM_REQUEST_EQUIPMENT_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ROOM_REQUEST_EQUIPMENT
+    label: ROOM_REQUEST_EQUIPMENT_HISTORY
+  ROOM_REQUEST_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour ROOM_REQUEST
+    label: ROOM_REQUEST_HISTORY
+  Sage_abonnement_entete:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: Sage_abonnement_entete
+  sage_client:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: sage_client
+  Sage_client_reference:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: Sage_client_reference
+  Sage_facture_detail:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: Sage_facture_detail
+  Sage_facture_entete:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: Sage_facture_entete
+  SAGE_RELANCE:
+    domain: organizations
+    role: child
+    description: Données d'interfaçage comptable et facturation Sage
+    label: SAGE_RELANCE
+  sysdiagrams:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: sysdiagrams'
+    label: sysdiagrams
+  T_EDITION:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: T_EDITION'
+    label: T_EDITION
+  TAB_ACCESSIBILITY_REQUIREMENTS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ACCESSIBILITY_REQUIREMENTS'
+    label: TAB_ACCESSIBILITY_REQUIREMENTS
+  TAB_BUILDING:
+    domain: referentials
+    role: master
+    description: Bâtiments du campus ETSI (Sophia Antipolis)
+    label: TAB_BUILDING
+  TAB_COMPATIBLE_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_COMPATIBLE_STATUS'
+    label: TAB_COMPATIBLE_STATUS
+  TAB_CONTACT_TYPE:
+    domain: referentials
+    role: master
+    description: Types de contacts (Officiel, Vote, Finance)
+    label: TAB_CONTACT_TYPE
+  TAB_COUNTRY:
+    domain: referentials
+    role: master
+    description: Référentiel des pays ISO, régions, appartenance UE / CEPT / EFTA
+    label: TAB_COUNTRY
+  TAB_CTY_REGION:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_CTY_REGION'
+    label: TAB_CTY_REGION
+  TAB_CTY_VOT_WEIGHT:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_CTY_VOT_WEIGHT'
+    label: TAB_CTY_VOT_WEIGHT
+  TAB_DEPARTMENT:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_DEPARTMENT'
+    label: TAB_DEPARTMENT
+  TAB_EQUIPMENT:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_EQUIPMENT'
+    label: TAB_EQUIPMENT
+  TAB_EQUIPMENT_SECTION:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_EQUIPMENT_SECTION'
+    label: TAB_EQUIPMENT_SECTION
+  TAB_GENERAL_REMARK_TYPE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_GENERAL_REMARK_TYPE'
+    label: TAB_GENERAL_REMARK_TYPE
+  TAB_JOB:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_JOB'
+    label: TAB_JOB
+  TAB_JOB_TITLES:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_JOB_TITLES'
+    label: TAB_JOB_TITLES
+  TAB_LINK_CODE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_LINK_CODE'
+    label: TAB_LINK_CODE
+  TAB_MEMBERSHIP:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MEMBERSHIP'
+    label: TAB_MEMBERSHIP
+  TAB_MTG_ACTION_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MTG_ACTION_STATUS'
+    label: TAB_MTG_ACTION_STATUS
+  TAB_MTG_CATEG:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MTG_CATEG'
+    label: TAB_MTG_CATEG
+  TAB_MTG_PAYMENT:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MTG_PAYMENT'
+    label: TAB_MTG_PAYMENT
+  TAB_MTG_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MTG_STATUS'
+    label: TAB_MTG_STATUS
+  TAB_MTG_TYPE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_MTG_TYPE'
+    label: TAB_MTG_TYPE
+  TAB_OFF:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_OFF'
+    label: TAB_OFF
+  TAB_OLIST_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_OLIST_STATUS'
+    label: TAB_OLIST_STATUS
+  TAB_OLIST_TYPE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_OLIST_TYPE'
+    label: TAB_OLIST_TYPE
+  TAB_ORGA_CATEG:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ORGA_CATEG'
+    label: TAB_ORGA_CATEG
+  Tab_Orga_Group_Family:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Group_Family'
+    label: Tab_Orga_Group_Family
+  Tab_Orga_Group_Role:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Group_Role'
+    label: Tab_Orga_Group_Role
+  TAB_ORGA_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ORGA_STATUS'
+    label: TAB_ORGA_STATUS
+  TAB_ORGA_TYPE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ORGA_TYPE'
+    label: TAB_ORGA_TYPE
+  TAB_OWNERSHIP_LEVEL:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_OWNERSHIP_LEVEL'
+    label: TAB_OWNERSHIP_LEVEL
+  TAB_PERS_ROLE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_PERS_ROLE'
+    label: TAB_PERS_ROLE
+  TAB_PERS_TITL:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_PERS_TITL'
+    label: TAB_PERS_TITL
+  TAB_PLIST_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_PLIST_STATUS'
+    label: TAB_PLIST_STATUS
+  TAB_PLIST_TYPE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_PLIST_TYPE'
+    label: TAB_PLIST_TYPE
+  TAB_RESP_ROLE:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_RESP_ROLE'
+    label: TAB_RESP_ROLE
+  TAB_ROOM_REQUEST_STATUS:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ROOM_REQUEST_STATUS'
+    label: TAB_ROOM_REQUEST_STATUS
+  TAB_TB_LOGS:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour TAB_TB
+    label: TAB_TB_LOGS
+  TAB_TB_OLD:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_TB_OLD'
+    label: TAB_TB_OLD
+  TAB_TB_STATUS_OLD:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_TB_STATUS_OLD'
+    label: TAB_TB_STATUS_OLD
+  TAB_TB_TYPE_OLD:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_TB_TYPE_OLD'
+    label: TAB_TB_TYPE_OLD
+  TAB_TIMEZONES:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_TIMEZONES'
+    label: TAB_TIMEZONES
+  Tab_UoC:
+    domain: referentials
+    role: master
+    description: Barème financier des Unités de Cotisation (UoC)
+    label: Tab_UoC
+  TAB_WORLDREGION:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_WORLDREGION'
+    label: TAB_WORLDREGION
+  TB_DESCENDANT:
+    domain: technical_bodies
+    role: child
+    description: 'Hiérarchie ou profil d''organe technique: TB_DESCENDANT'
+    label: TB_DESCENDANT
+  TB_HISTORY:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour TB
+    label: TB_HISTORY
+  TB_MEETING_PROFILE:
+    domain: technical_bodies
+    role: child
+    description: 'Hiérarchie ou profil d''organe technique: TB_MEETING_PROFILE'
+    label: TB_MEETING_PROFILE
+  TB_PROFILE_OLD:
+    domain: technical_bodies
+    role: child
+    description: 'Paramètres de l''organe technique: TB_PROFILE_OLD'
+    label: TB_PROFILE_OLD
+  TB_Stats:
+    domain: technical_bodies
+    role: child
+    description: 'Paramètres de l''organe technique: TB_Stats'
+    label: TB_Stats
+  TELDIR_LOG:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour TELDIR_LOG
+    label: TELDIR_LOG
+  TGPP_REP_ORGA_CONTACT:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: TGPP_REP_ORGA_CONTACT'
+    label: TGPP_REP_ORGA_CONTACT
+  VatValidationMask:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: VatValidationMask'
+    label: VatValidationMask
+  VMS_USERS_DELETE:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour VMS_USERS_DELETE
+    label: VMS_USERS_DELETE
+  WITHDRAWAL_REQUESTS:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: WITHDRAWAL_REQUESTS'
+    label: WITHDRAWAL_REQUESTS
+  X_mtg_users_presence_rep_orgs_status_save20210414:
+    domain: referentials
+    role: master
+    description: 'Table de référence ou support: X_mtg_users_presence_rep_orgs_status_save20210414'
+    label: X_mtg_users_presence_rep_orgs_status_save20210414
+  Excess_Contribution:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Excess_Contribution'
+    label: Excess_Contribution
+  Common_Field:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Common_Field'
+    label: Common_Field
+  Email_Domain_Name:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Email_Domain_Name'
+    label: Email_Domain_Name
+  Orga_Declaration:
+    domain: organizations
+    role: tx
+    description: Déclarations de chiffre d'affaires (ECRT) pour le calcul de cotisation
+    label: Orga_Declaration
+  ORGA_IN_LIST_TRANSITION:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: ORGA_IN_LIST_TRANSITION'
+    label: ORGA_IN_LIST_TRANSITION
+  Orga_Status:
+    domain: organizations
+    role: tx
+    description: Statut d'adhésion officiel, catégorie, classe contributive et droits
+      de vote
+    label: Orga_Status
+  OrgaContributionHistory:
+    domain: audit_logs
+    role: log
+    description: Journal d'audit et historique pour OrgaContributionHistory
+    label: OrgaContributionHistory
+  OrgaInListStatusIsg:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: OrgaInListStatusIsg'
+    label: OrgaInListStatusIsg
+  Organisation_Address:
+    domain: organizations
+    role: child
+    description: Adresses postales, sièges sociaux et adresses de facturation
+    label: Organisation_Address
+  Organisation_Corporate_OP:
+    domain: organizations
+    role: child
+    description: Liaison groupes d'entreprises et partenaires organisationnels (OP)
+    label: Organisation_Corporate_OP
+  Organisation_Credit_Notes:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Organisation_Credit_Notes'
+    label: Organisation_Credit_Notes
+  Organisation_Email_Domain_Name:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Organisation_Email_Domain_Name'
+    label: Organisation_Email_Domain_Name
+  Organisation_Person_Contact:
+    domain: organizations
+    role: join
+    description: Mandats de représentation et contacts officiels d'organisations
+    label: Organisation_Person_Contact
+  Person_Representing_Organisation:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: Person_Representing_Organisation'
+    label: Person_Representing_Organisation
+  Tab_Corporate_OP:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Corporate_OP'
+    label: Tab_Corporate_OP
+  Tab_Orga_Address_Type:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Address_Type'
+    label: Tab_Orga_Address_Type
+  Tab_Orga_Category:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Category'
+    label: Tab_Orga_Category
+  Tab_Orga_Declaration_Family:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Declaration_Family'
+    label: Tab_Orga_Declaration_Family
+  Tab_Orga_Declaration_Source:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Declaration_Source'
+    label: Tab_Orga_Declaration_Source
+  Tab_Orga_Declaration_Type:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Declaration_Type'
+    label: Tab_Orga_Declaration_Type
+  TAB_ORGA_IN_LIST_TRANSITION_REASON:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: TAB_ORGA_IN_LIST_TRANSITION_REASON'
+    label: TAB_ORGA_IN_LIST_TRANSITION_REASON
+  Tab_Orga_Status:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Status'
+    label: Tab_Orga_Status
+  Tab_Orga_Status_Family:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Status_Family'
+    label: Tab_Orga_Status_Family
+  Tab_Orga_Status_Reason:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Status_Reason'
+    label: Tab_Orga_Status_Reason
+  Tab_Orga_Withdrawal_Reason:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Orga_Withdrawal_Reason'
+    label: Tab_Orga_Withdrawal_Reason
+  Tab_Representing_Context:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Representing_Context'
+    label: Tab_Representing_Context
+  Person_Remarks:
+    domain: persons
+    role: child
+    description: 'Données complémentaires sur les personnes: Person_Remarks'
+    label: Person_Remarks
+  Tab_Person_Remarks_Source:
+    domain: referentials
+    role: master
+    description: 'Nomenclature de référence: Tab_Person_Remarks_Source'
+    label: Tab_Person_Remarks_Source
+  Sharing_Data:
+    domain: organizations
+    role: child
+    description: 'Données d''adhésion de l''organisation: Sharing_Data'
+    label: Sharing_Data
+  WORK_ITEM:
+    domain: work_programme
+    role: hub
+    description: Spécifications et normes techniques (TS, TR, EN, ES, GS)
+    label: WORK_ITEM
+columns:
+- - organizations
+  - persons
+- - technical_bodies
+  - meetings
+- - work_programme
+  - referentials
+  - audit_logs
