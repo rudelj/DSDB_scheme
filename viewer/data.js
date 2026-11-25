@@ -5,44 +5,44 @@
     "DOMAINS": [
       {
         "id": "organizations",
-        "label": "Organisations & Adhésion",
+        "label": "Organizations & Membership",
         "short": "ORGA",
         "color": "#2563eb"
       },
       {
         "id": "persons",
-        "label": "Personnes & Délégations",
+        "label": "Persons & Delegations",
         "short": "PERS",
         "color": "#7c3aed"
       },
       {
         "id": "technical_bodies",
-        "label": "Organes Techniques (TBs)",
+        "label": "Technical Bodies (TBs)",
         "short": "TB",
         "color": "#059669"
       },
       {
         "id": "meetings",
-        "label": "Réunions & Événements",
+        "label": "Meetings & Events",
         "short": "MTG",
         "color": "#d97706"
       },
       {
         "id": "work_programme",
-        "label": "Programme de Normalisation (WPM)",
+        "label": "Work Programme (WPM)",
         "short": "WPM",
         "color": "#dc2626"
       },
       {
         "id": "referentials",
-        "label": "Référentiels & Nomenclatures",
+        "label": "Reference Data & Taxonomies",
         "short": "REF",
         "color": "#4b5563",
         "neutral": true
       },
       {
         "id": "audit_logs",
-        "label": "Historique & Logs d'Audit",
+        "label": "Audit Logs & History",
         "short": "LOG",
         "color": "#64748b",
         "neutral": true
@@ -54,7 +54,7 @@
         "label": "Body",
         "domain": "technical_bodies",
         "role": "hub",
-        "desc": "Comités techniques, groupes de travail et partenariats (TBs, WGs, ISGs)",
+        "desc": "Technical committees, working groups, task forces and ISGs",
         "columns": [
           {
             "name": "Id",
@@ -243,7 +243,7 @@
         "label": "BodyFamily",
         "domain": "technical_bodies",
         "role": "master",
-        "desc": "Nomenclature de classification des organes: BodyFamily",
+        "desc": "Classification taxonomy for technical bodies: BodyFamily",
         "columns": [
           {
             "name": "BodyFamilyCode",
@@ -289,7 +289,7 @@
         "label": "BodyRemark",
         "domain": "technical_bodies",
         "role": "child",
-        "desc": "Paramètres de l'organe technique: BodyRemark",
+        "desc": "Technical body parameters: BodyRemark",
         "columns": [
           {
             "name": "Id",
@@ -332,7 +332,7 @@
         "label": "BodyState",
         "domain": "technical_bodies",
         "role": "master",
-        "desc": "Nomenclature de classification des organes: BodyState",
+        "desc": "Classification taxonomy for technical bodies: BodyState",
         "columns": [
           {
             "name": "Id",
@@ -371,7 +371,7 @@
         "label": "BodyType",
         "domain": "technical_bodies",
         "role": "master",
-        "desc": "Nomenclature de classification des organes: BodyType",
+        "desc": "Classification taxonomy for technical bodies: BodyType",
         "columns": [
           {
             "name": "Id",
@@ -411,7 +411,7 @@
         "label": "BodyTypeFamily",
         "domain": "technical_bodies",
         "role": "join",
-        "desc": "Association de typologie d'organe: BodyTypeFamily",
+        "desc": "Body type mapping and meeting association: BodyTypeFamily",
         "columns": [
           {
             "name": "BodyTypeId",
@@ -440,7 +440,7 @@
         "label": "3GPP_K4_Prints",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: 3GPP_K4_Prints",
+        "desc": "Reference lookup table: 3GPP_K4_Prints",
         "columns": [
           {
             "name": "LastPrintDate",
@@ -489,7 +489,7 @@
         "label": "3GPP_K4_Registrations",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: 3GPP_K4_Registrations",
+        "desc": "Reference lookup table: 3GPP_K4_Registrations",
         "columns": [
           {
             "name": "N",
@@ -518,7 +518,7 @@
         "label": "3GPP_K4_Scans",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: 3GPP_K4_Scans",
+        "desc": "Reference lookup table: 3GPP_K4_Scans",
         "columns": [
           {
             "name": "ScanID",
@@ -567,7 +567,7 @@
         "label": "ATTENDANCE_GROUP_FEE",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: ATTENDANCE_GROUP_FEE",
+        "desc": "Meeting logistics details: ATTENDANCE_GROUP_FEE",
         "columns": [
           {
             "name": "FAMILY_ID",
@@ -597,7 +597,7 @@
         "label": "BodiesMeetingTypes",
         "domain": "technical_bodies",
         "role": "join",
-        "desc": "Association de typologie d'organe: BodiesMeetingTypes",
+        "desc": "Body type mapping and meeting association: BodiesMeetingTypes",
         "columns": [
           {
             "name": "Id",
@@ -640,7 +640,7 @@
         "label": "CALENDAR",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: CALENDAR",
+        "desc": "Reference taxonomy: CALENDAR",
         "columns": [
           {
             "name": "REF_YEAR",
@@ -688,7 +688,7 @@
         "label": "CL_Emails",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: CL_Emails",
+        "desc": "Reference lookup table: CL_Emails",
         "columns": [
           {
             "name": "lastname",
@@ -712,7 +712,7 @@
         "label": "CONTACT_PERSON_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour CONTACT_PERSON_DELETE",
+        "desc": "Audit log and change history for CONTACT_PERSON_DELETE",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -766,7 +766,7 @@
         "label": "CONTACT_PERSON_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour CONTACT_PERSON",
+        "desc": "Audit log and change history for CONTACT_PERSON",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -846,7 +846,7 @@
         "label": "CONTACT_PERSON_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: CONTACT_PERSON_OLD",
+        "desc": "Reference lookup table: CONTACT_PERSON_OLD",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -899,7 +899,7 @@
         "label": "Contribution_Notification",
         "domain": "work_programme",
         "role": "tx",
-        "desc": "Notification et soumission de contributions techniques",
+        "desc": "Technical contribution notification and upload records",
         "columns": [
           {
             "name": "ID",
@@ -946,7 +946,7 @@
         "label": "dtproperties",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: dtproperties",
+        "desc": "Reference lookup table: dtproperties",
         "columns": [
           {
             "name": "id",
@@ -989,7 +989,7 @@
         "label": "ETSI_DEPT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: ETSI_DEPT",
+        "desc": "Reference lookup table: ETSI_DEPT",
         "columns": [
           {
             "name": "DEP_CODE",
@@ -1022,7 +1022,7 @@
         "label": "ETSI_DEPT_LOGS_TO_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ETSI_DEPT_TO_DELETE",
+        "desc": "Audit log and change history for ETSI_DEPT_TO_DELETE",
         "columns": [
           {
             "name": "DEP_CODE",
@@ -1086,7 +1086,7 @@
         "label": "ETSI_STRUCT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: ETSI_STRUCT",
+        "desc": "Reference lookup table: ETSI_STRUCT",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -1127,7 +1127,7 @@
         "label": "Events",
         "domain": "meetings",
         "role": "hub",
-        "desc": "Événements institutionnels majeurs et ateliers",
+        "desc": "Major corporate events and workshops",
         "columns": [
           {
             "name": "Pk_EventId",
@@ -1191,7 +1191,7 @@
         "label": "GENERAL_REMARK_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour GENERAL_REMARK",
+        "desc": "Audit log and change history for GENERAL_REMARK",
         "columns": [
           {
             "name": "REMARK_ID",
@@ -1277,7 +1277,7 @@
         "label": "GENERAL_REMARK_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: GENERAL_REMARK_OLD",
+        "desc": "Reference lookup table: GENERAL_REMARK_OLD",
         "columns": [
           {
             "name": "REMARK_ID",
@@ -1333,7 +1333,7 @@
         "label": "HISTORY_DUPLICATE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour HISTORY_DUPLICATE",
+        "desc": "Audit log and change history for HISTORY_DUPLICATE",
         "columns": [
           {
             "name": "ID",
@@ -1380,7 +1380,7 @@
         "label": "IND_Announc",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: IND_Announc",
+        "desc": "Reference lookup table: IND_Announc",
         "columns": [
           {
             "name": "ANNOUNC_ID",
@@ -1438,7 +1438,7 @@
         "label": "IND_Doc",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: IND_Doc",
+        "desc": "Reference lookup table: IND_Doc",
         "columns": [
           {
             "name": "DOC_ID",
@@ -1477,7 +1477,7 @@
         "label": "IND_Interface",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: IND_Interface",
+        "desc": "Reference lookup table: IND_Interface",
         "columns": [
           {
             "name": "INTERFACE_ID",
@@ -1524,7 +1524,7 @@
         "label": "IND_Meeting",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: IND_Meeting",
+        "desc": "Reference lookup table: IND_Meeting",
         "columns": [
           {
             "name": "MEETING_ID",
@@ -1563,7 +1563,7 @@
         "label": "MAIL_TEXT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: MAIL_TEXT",
+        "desc": "Reference lookup table: MAIL_TEXT",
         "columns": [
           {
             "name": "MODE",
@@ -1581,7 +1581,7 @@
         "label": "MAINT_3GUCheckIn",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: MAINT_3GUCheckIn",
+        "desc": "Reference lookup table: MAINT_3GUCheckIn",
         "columns": [
           {
             "name": "Token",
@@ -1620,7 +1620,7 @@
         "label": "MAINT_DOCSET_ToCreate",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: MAINT_DOCSET_ToCreate",
+        "desc": "Reference lookup table: MAINT_DOCSET_ToCreate",
         "columns": [
           {
             "name": "MTG_ID",
@@ -1654,7 +1654,7 @@
         "label": "MAINT_MultipleCheckins",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: MAINT_MultipleCheckins",
+        "desc": "Reference lookup table: MAINT_MultipleCheckins",
         "columns": [
           {
             "name": "MTG_REF",
@@ -1730,7 +1730,7 @@
         "label": "marker",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: marker",
+        "desc": "Reference lookup table: marker",
         "columns": [
           {
             "name": "ID",
@@ -1769,7 +1769,7 @@
         "label": "MEETING_ACCESSIBILITY_REQUIREMENTS",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MEETING_ACCESSIBILITY_REQUIREMENTS",
+        "desc": "Meeting logistics details: MEETING_ACCESSIBILITY_REQUIREMENTS",
         "columns": [
           {
             "name": "Id",
@@ -1803,7 +1803,7 @@
         "label": "MEETING_NOTES",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MEETING_NOTES",
+        "desc": "Meeting logistics details: MEETING_NOTES",
         "columns": [
           {
             "name": "MTG_ID",
@@ -1838,7 +1838,7 @@
         "label": "MEETING_PT",
         "domain": "meetings",
         "role": "join",
-        "desc": "Liaison meeting / ressource: MEETING_PT",
+        "desc": "Meeting to technical committee/resource mapping: MEETING_PT",
         "columns": [
           {
             "name": "MTG_ID",
@@ -1872,7 +1872,7 @@
         "label": "MEETING_REGISTER_REQUEST",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MEETING_REGISTER_REQUEST",
+        "desc": "Meeting logistics details: MEETING_REGISTER_REQUEST",
         "columns": [
           {
             "name": "Id",
@@ -1902,7 +1902,7 @@
         "label": "MEETING_RESPONSIBLE",
         "domain": "meetings",
         "role": "join",
-        "desc": "Liaison meeting / ressource: MEETING_RESPONSIBLE",
+        "desc": "Meeting to technical committee/resource mapping: MEETING_RESPONSIBLE",
         "columns": [
           {
             "name": "MTG_ID",
@@ -1938,7 +1938,7 @@
         "label": "MEETING_RESPONSIBLE_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETING_RESPONSIBLE",
+        "desc": "Audit log and change history for MEETING_RESPONSIBLE",
         "columns": [
           {
             "name": "MTG_ID",
@@ -1999,7 +1999,7 @@
         "label": "MEETING_ROOM",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MEETING_ROOM",
+        "desc": "Meeting logistics details: MEETING_ROOM",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2060,7 +2060,7 @@
         "label": "MEETING_ROOM_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETING_ROOM_DELETE",
+        "desc": "Audit log and change history for MEETING_ROOM_DELETE",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2114,7 +2114,7 @@
         "label": "MEETING_ROOM_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETING_ROOM",
+        "desc": "Audit log and change history for MEETING_ROOM",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2199,7 +2199,7 @@
         "label": "MEETING_TB",
         "domain": "meetings",
         "role": "join",
-        "desc": "Liaison meeting / ressource: MEETING_TB",
+        "desc": "Meeting to technical committee/resource mapping: MEETING_TB",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2239,7 +2239,7 @@
         "label": "MEETING_TB_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETING_TB_DELETE",
+        "desc": "Audit log and change history for MEETING_TB_DELETE",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2275,7 +2275,7 @@
         "label": "MEETING_TB_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETING_TB",
+        "desc": "Audit log and change history for MEETING_TB",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2342,7 +2342,7 @@
         "label": "MeetingPayment",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MeetingPayment",
+        "desc": "Meeting logistics details: MeetingPayment",
         "columns": [
           {
             "name": "Id",
@@ -2384,7 +2384,7 @@
         "label": "MEETINGS",
         "domain": "meetings",
         "role": "hub",
-        "desc": "Sessions, assemblées générales et réunions de travail",
+        "desc": "General Assemblies, technical committee sessions and hybrid meetings",
         "columns": [
           {
             "name": "MTG_ID",
@@ -2767,7 +2767,7 @@
         "label": "MEETINGS_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETINGS_DELETE",
+        "desc": "Audit log and change history for MEETINGS_DELETE",
         "columns": [
           {
             "name": "MTG_ID",
@@ -3145,7 +3145,7 @@
         "label": "MEETINGS_HARDSHIP_EXEMPTION",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MEETINGS_HARDSHIP_EXEMPTION",
+        "desc": "Meeting logistics details: MEETINGS_HARDSHIP_EXEMPTION",
         "columns": [
           {
             "name": "MeetingID",
@@ -3174,7 +3174,7 @@
         "label": "MEETINGS_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MEETINGS",
+        "desc": "Audit log and change history for MEETINGS",
         "columns": [
           {
             "name": "MTG_ID",
@@ -3578,7 +3578,7 @@
         "label": "MERGE_ORGANISATION_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MERGE_ORGANISATION",
+        "desc": "Audit log and change history for MERGE_ORGANISATION",
         "columns": [
           {
             "name": "OLD_ORGA_ID",
@@ -3618,7 +3618,7 @@
         "label": "MERGE_PERSON_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MERGE_PERSON",
+        "desc": "Audit log and change history for MERGE_PERSON",
         "columns": [
           {
             "name": "OLD_PERSON_ID",
@@ -3678,7 +3678,7 @@
         "label": "MERGED_PERSON",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: MERGED_PERSON",
+        "desc": "Person profile metadata: MERGED_PERSON",
         "columns": [
           {
             "name": "ANON_ID",
@@ -3702,7 +3702,7 @@
         "label": "MTG_ACTION",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MTG_ACTION",
+        "desc": "Meeting logistics details: MTG_ACTION",
         "columns": [
           {
             "name": "MTG_ACTION_LIST_ID",
@@ -3764,7 +3764,7 @@
         "label": "MTG_ACTION_LIST",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MTG_ACTION_LIST",
+        "desc": "Meeting logistics details: MTG_ACTION_LIST",
         "columns": [
           {
             "name": "MTG_ACTION_LIST_ID",
@@ -3805,7 +3805,7 @@
         "label": "MTG_CONTACT",
         "domain": "meetings",
         "role": "join",
-        "desc": "Liaison meeting / ressource: MTG_CONTACT",
+        "desc": "Meeting to technical committee/resource mapping: MTG_CONTACT",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -3850,7 +3850,7 @@
         "label": "MTG_CONTACT_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MTG_CONTACT_DELETE",
+        "desc": "Audit log and change history for MTG_CONTACT_DELETE",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -3896,7 +3896,7 @@
         "label": "MTG_CONTACT_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MTG_CONTACT",
+        "desc": "Audit log and change history for MTG_CONTACT",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -3968,7 +3968,7 @@
         "label": "MTG_EVENT_LOCATION_INFO",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MTG_EVENT_LOCATION_INFO",
+        "desc": "Meeting logistics details: MTG_EVENT_LOCATION_INFO",
         "columns": [
           {
             "name": "MTG_ID",
@@ -3992,7 +3992,7 @@
         "label": "MTG_Roles_Group",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MTG_Roles_Group",
+        "desc": "Meeting logistics details: MTG_Roles_Group",
         "columns": [
           {
             "name": "Id",
@@ -4027,7 +4027,7 @@
         "label": "MTG_USERS_ACCESSIBILITY_REQUIREMENTS",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: MTG_USERS_ACCESSIBILITY_REQUIREMENTS",
+        "desc": "Meeting logistics details: MTG_USERS_ACCESSIBILITY_REQUIREMENTS",
         "columns": [
           {
             "name": "Id",
@@ -4067,7 +4067,7 @@
         "label": "MTG_USERS_PRESENCE",
         "domain": "meetings",
         "role": "tx",
-        "desc": "Émargement, présence physique et distancielle des délégués",
+        "desc": "Participant presence records and check-ins",
         "columns": [
           {
             "name": "PK_USERS_PRESENCE_TYPE",
@@ -4239,7 +4239,7 @@
         "label": "MTG_USERS_PRESENCE_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour MTG_USERS_PRESENCE",
+        "desc": "Audit log and change history for MTG_USERS_PRESENCE",
         "columns": [
           {
             "name": "PK_USERS_PRESENCE_TYPE",
@@ -4440,7 +4440,7 @@
         "label": "MTG_USERS_PRESENCE_REP_ORGS_STATUS",
         "domain": "meetings",
         "role": "child",
-        "desc": "Calcul des droits de représentation et quorum de séance",
+        "desc": "Representation rights and quorum computation for voting sessions",
         "columns": [
           {
             "name": "FK_ORGS_CODE",
@@ -4479,7 +4479,7 @@
         "label": "OC_Emails",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: OC_Emails",
+        "desc": "Reference lookup table: OC_Emails",
         "columns": [
           {
             "name": "lastname",
@@ -4503,7 +4503,7 @@
         "label": "OFF_CONTACT_EMAIL",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: OFF_CONTACT_EMAIL",
+        "desc": "Reference lookup table: OFF_CONTACT_EMAIL",
         "columns": [
           {
             "name": "list_name",
@@ -4531,7 +4531,7 @@
         "label": "OLD_TAB_ORGA_WITHDRAWAL_REASONS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour OLD_TAB_ORGA_WITHDRAWAL_REASONS",
+        "desc": "Audit log and change history for OLD_TAB_ORGA_WITHDRAWAL_REASONS",
         "columns": [
           {
             "name": "WITHDRAWAL_REASON_ID",
@@ -4560,7 +4560,7 @@
         "label": "ORGA_EVOLUTION",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGA_EVOLUTION",
+        "desc": "Organization membership details: ORGA_EVOLUTION",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -4618,7 +4618,7 @@
         "label": "ORGA_GA_DECISION_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_GA_DECISION",
+        "desc": "Audit log and change history for ORGA_GA_DECISION",
         "columns": [
           {
             "name": "ORGA_GA_DECISION_ID",
@@ -4692,7 +4692,7 @@
         "label": "Orga_Group",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Orga_Group",
+        "desc": "Organization membership details: Orga_Group",
         "columns": [
           {
             "name": "Group_Id",
@@ -4754,7 +4754,7 @@
         "label": "Orga_Group_Association",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Orga_Group_Association",
+        "desc": "Organization membership details: Orga_Group_Association",
         "columns": [
           {
             "name": "Group_Id",
@@ -4781,7 +4781,7 @@
         "label": "Orga_Group_Contact",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Orga_Group_Contact",
+        "desc": "Organization membership details: Orga_Group_Contact",
         "columns": [
           {
             "name": "Person_Id",
@@ -4802,7 +4802,7 @@
         "label": "ORGA_IN_LIST",
         "domain": "organizations",
         "role": "join",
-        "desc": "Rattachement d'organisations à des listes institutionnelles",
+        "desc": "Organization roster and committee list memberships",
         "columns": [
           {
             "name": "OLIST_ID",
@@ -4866,7 +4866,7 @@
         "label": "ORGA_IN_LIST_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_IN_LIST",
+        "desc": "Audit log and change history for ORGA_IN_LIST",
         "columns": [
           {
             "name": "OLIST_ID",
@@ -4947,7 +4947,7 @@
         "label": "ORGA_INV_PENALTY",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGA_INV_PENALTY",
+        "desc": "Organization membership details: ORGA_INV_PENALTY",
         "columns": [
           {
             "name": "orga_id",
@@ -4965,7 +4965,7 @@
         "label": "ORGA_INVOICE_HIST",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_INVOICE_HIST",
+        "desc": "Audit log and change history for ORGA_INVOICE_HIST",
         "columns": [
           {
             "name": "INV_ACCOUNT_YEAR",
@@ -5003,7 +5003,7 @@
         "label": "ORGA_LINKS",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGA_LINKS",
+        "desc": "Organization membership details: ORGA_LINKS",
         "columns": [
           {
             "name": "ORGA_ID_PARENT",
@@ -5050,7 +5050,7 @@
         "label": "ORGA_LINKS_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_LINKS_DELETE",
+        "desc": "Audit log and change history for ORGA_LINKS_DELETE",
         "columns": [
           {
             "name": "ORGA_ID_PARENT",
@@ -5096,7 +5096,7 @@
         "label": "ORGA_LIST",
         "domain": "organizations",
         "role": "join",
-        "desc": "Rattachement d'organisations à des listes institutionnelles",
+        "desc": "Organization roster and committee list memberships",
         "columns": [
           {
             "name": "OLIST_ID",
@@ -5167,7 +5167,7 @@
         "label": "ORGA_LIST_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_LIST",
+        "desc": "Audit log and change history for ORGA_LIST",
         "columns": [
           {
             "name": "OLIST_ID",
@@ -5265,7 +5265,7 @@
         "label": "ORGA_STATUS_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_STATUS_DELETE",
+        "desc": "Audit log and change history for ORGA_STATUS_DELETE",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -5322,7 +5322,7 @@
         "label": "ORGA_STATUS_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGA_STATUS",
+        "desc": "Audit log and change history for ORGA_STATUS",
         "columns": [
           {
             "name": "Log_ID",
@@ -5405,7 +5405,7 @@
         "label": "ORGA_STATUS_OLD",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGA_STATUS_OLD",
+        "desc": "Organization membership details: ORGA_STATUS_OLD",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -5460,7 +5460,7 @@
         "label": "ORGANISATION",
         "domain": "organizations",
         "role": "hub",
-        "desc": "Membres, entreprises, universités et partenaires de l'ETSI",
+        "desc": "Member companies, universities, public authorities and partners",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -5748,7 +5748,7 @@
         "label": "ORGANISATION__LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGANISATION_",
+        "desc": "Audit log and change history for ORGANISATION_",
         "columns": [
           {
             "name": "Log_ID",
@@ -6055,7 +6055,7 @@
         "label": "ORGANISATION_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGANISATION_DELETE",
+        "desc": "Audit log and change history for ORGANISATION_DELETE",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -6336,7 +6336,7 @@
         "label": "ORGANISATION_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ORGANISATION",
+        "desc": "Audit log and change history for ORGANISATION",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -6378,7 +6378,7 @@
         "label": "ORGANISATION_VAT",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGANISATION_VAT",
+        "desc": "Organization membership details: ORGANISATION_VAT",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -6594,7 +6594,7 @@
         "label": "PERSON",
         "domain": "persons",
         "role": "hub",
-        "desc": "Délégués, représentants d'adhérents, présidents et experts",
+        "desc": "Delegates, member representatives, committee chairs and technical experts",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -6966,7 +6966,7 @@
         "label": "PERSON__LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_",
+        "desc": "Audit log and change history for PERSON_",
         "columns": [
           {
             "name": "Log_ID",
@@ -7354,7 +7354,7 @@
         "label": "PERSON_ADSI",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: PERSON_ADSI",
+        "desc": "Person profile metadata: PERSON_ADSI",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -7373,7 +7373,7 @@
         "label": "PERSON_ADSI_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_ADSI_DELETE",
+        "desc": "Audit log and change history for PERSON_ADSI_DELETE",
         "columns": [
           {
             "name": "PROCESS_TS",
@@ -7394,7 +7394,7 @@
         "label": "PERSON_delete",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_delete",
+        "desc": "Audit log and change history for PERSON_delete",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -7746,7 +7746,7 @@
         "label": "PERSON_GROUP",
         "domain": "persons",
         "role": "master",
-        "desc": "Listes de distribution et groupes de contacts",
+        "desc": "Distribution lists and expert roster definitions",
         "columns": [
           {
             "name": "GROUP_TYPE",
@@ -7815,7 +7815,7 @@
         "label": "PERSON_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON",
+        "desc": "Audit log and change history for PERSON",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -7857,7 +7857,7 @@
         "label": "PERSON_IN_LIST",
         "domain": "persons",
         "role": "join",
-        "desc": "Inscriptions aux listes de diffusion et collèges de comités",
+        "desc": "Subscriptions to technical body rosters and distribution lists",
         "columns": [
           {
             "name": "PLIST_ID",
@@ -8004,7 +8004,7 @@
         "label": "PERSON_IN_LIST_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_IN_LIST_DELETE",
+        "desc": "Audit log and change history for PERSON_IN_LIST_DELETE",
         "columns": [
           {
             "name": "PLIST_ID",
@@ -8145,7 +8145,7 @@
         "label": "PERSON_IN_LIST_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_IN_LIST",
+        "desc": "Audit log and change history for PERSON_IN_LIST",
         "columns": [
           {
             "name": "Log_ID",
@@ -8306,7 +8306,7 @@
         "label": "PERSON_LIST",
         "domain": "persons",
         "role": "master",
-        "desc": "Listes de distribution et groupes de contacts",
+        "desc": "Distribution lists and expert roster definitions",
         "columns": [
           {
             "name": "PLIST_ID",
@@ -8416,7 +8416,7 @@
         "label": "PERSON_LIST_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_LIST_DELETE",
+        "desc": "Audit log and change history for PERSON_LIST_DELETE",
         "columns": [
           {
             "name": "PLIST_ID",
@@ -8518,7 +8518,7 @@
         "label": "PERSON_LIST_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_LIST",
+        "desc": "Audit log and change history for PERSON_LIST",
         "columns": [
           {
             "name": "PLIST_ID",
@@ -8651,7 +8651,7 @@
         "label": "PERSON_NOT_CONFIRMED",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: PERSON_NOT_CONFIRMED",
+        "desc": "Person profile metadata: PERSON_NOT_CONFIRMED",
         "columns": [
           {
             "name": "ANON_ID",
@@ -8744,7 +8744,7 @@
         "label": "PERSON_NOT_CONFIRMED_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_NOT_CONFIRMED_DELETE",
+        "desc": "Audit log and change history for PERSON_NOT_CONFIRMED_DELETE",
         "columns": [
           {
             "name": "ANON_ID",
@@ -8829,7 +8829,7 @@
         "label": "PERSON_PRIVACY",
         "domain": "persons",
         "role": "child",
-        "desc": "Préférences de confidentialité et consentement RGPD",
+        "desc": "GDPR privacy preferences and consents",
         "columns": [
           {
             "name": "ID",
@@ -8877,7 +8877,7 @@
         "label": "PERSON_PRIVACY_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour PERSON_PRIVACY",
+        "desc": "Audit log and change history for PERSON_PRIVACY",
         "columns": [
           {
             "name": "ID",
@@ -8955,7 +8955,7 @@
         "label": "Person_RedList",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: Person_RedList",
+        "desc": "Person profile metadata: Person_RedList",
         "columns": [
           {
             "name": "Person_Id",
@@ -8978,7 +8978,7 @@
         "label": "REG_NOT_CONFIRMED",
         "domain": "meetings",
         "role": "child",
-        "desc": "Détail de gestion des réunions: REG_NOT_CONFIRMED",
+        "desc": "Meeting logistics details: REG_NOT_CONFIRMED",
         "columns": [
           {
             "name": "RNCONF_ID",
@@ -9052,7 +9052,7 @@
         "label": "REG_NOT_CONFIRMED_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour REG_NOT_CONFIRMED_DELETE",
+        "desc": "Audit log and change history for REG_NOT_CONFIRMED_DELETE",
         "columns": [
           {
             "name": "RNCONF_ID",
@@ -9122,7 +9122,7 @@
         "label": "REPRESENTING_ORGA_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour REPRESENTING_ORGA_DELETE",
+        "desc": "Audit log and change history for REPRESENTING_ORGA_DELETE",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -9164,7 +9164,7 @@
         "label": "REPRESENTING_ORGA_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: REPRESENTING_ORGA_OLD",
+        "desc": "Reference lookup table: REPRESENTING_ORGA_OLD",
         "columns": [
           {
             "name": "PERSON_ID",
@@ -9203,7 +9203,7 @@
         "label": "ROOM",
         "domain": "meetings",
         "role": "master",
-        "desc": "Référentiel des salles et configurations de réunion",
+        "desc": "Room inventory and layout configurations",
         "columns": [
           {
             "name": "ROOM_NUMB",
@@ -9277,7 +9277,7 @@
         "label": "ROOM_LAYOUT",
         "domain": "meetings",
         "role": "master",
-        "desc": "Référentiel des salles et configurations de réunion",
+        "desc": "Room inventory and layout configurations",
         "columns": [
           {
             "name": "Id",
@@ -9296,7 +9296,7 @@
         "label": "ROOM_REQUEST",
         "domain": "meetings",
         "role": "tx",
-        "desc": "Réservations logistiques des salles et équipements",
+        "desc": "Meeting room bookings and technical equipment logistics",
         "columns": [
           {
             "name": "ROOM_REQUEST_ID",
@@ -9444,7 +9444,7 @@
         "label": "ROOM_REQUEST_EQUIPMENT",
         "domain": "meetings",
         "role": "tx",
-        "desc": "Réservations logistiques des salles et équipements",
+        "desc": "Meeting room bookings and technical equipment logistics",
         "columns": [
           {
             "name": "ROOM_REQUEST_ID",
@@ -9475,7 +9475,7 @@
         "label": "ROOM_REQUEST_EQUIPMENT_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ROOM_REQUEST_EQUIPMENT",
+        "desc": "Audit log and change history for ROOM_REQUEST_EQUIPMENT",
         "columns": [
           {
             "name": "ROOM_REQUEST_ID",
@@ -9511,7 +9511,7 @@
         "label": "ROOM_REQUEST_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour ROOM_REQUEST",
+        "desc": "Audit log and change history for ROOM_REQUEST",
         "columns": [
           {
             "name": "ROOM_REQUEST_ID",
@@ -9653,7 +9653,7 @@
         "label": "Sage_abonnement_entete",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "type_enregistrement",
@@ -9972,7 +9972,7 @@
         "label": "sage_client",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "code_client",
@@ -10186,7 +10186,7 @@
         "label": "Sage_client_reference",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "code_client",
@@ -10385,7 +10385,7 @@
         "label": "Sage_facture_detail",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "rec_type",
@@ -10544,7 +10544,7 @@
         "label": "Sage_facture_entete",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "type_enregistrement",
@@ -10788,7 +10788,7 @@
         "label": "SAGE_RELANCE",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'interfaçage comptable et facturation Sage",
+        "desc": "Sage accounting and billing integration",
         "columns": [
           {
             "name": "SAGE_KEY",
@@ -10802,7 +10802,7 @@
         "label": "sysdiagrams",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: sysdiagrams",
+        "desc": "Reference lookup table: sysdiagrams",
         "columns": [
           {
             "name": "name",
@@ -10834,7 +10834,7 @@
         "label": "T_EDITION",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: T_EDITION",
+        "desc": "Reference lookup table: T_EDITION",
         "columns": [
           {
             "name": "ID",
@@ -11248,7 +11248,7 @@
         "label": "TAB_ACCESSIBILITY_REQUIREMENTS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ACCESSIBILITY_REQUIREMENTS",
+        "desc": "Reference taxonomy: TAB_ACCESSIBILITY_REQUIREMENTS",
         "columns": [
           {
             "name": "Requirement_id",
@@ -11290,7 +11290,7 @@
         "label": "TAB_BUILDING",
         "domain": "referentials",
         "role": "master",
-        "desc": "Bâtiments du campus ETSI (Sophia Antipolis)",
+        "desc": "ETSI campus buildings (Sophia Antipolis)",
         "columns": [
           {
             "name": "BUILDING",
@@ -11338,7 +11338,7 @@
         "label": "TAB_COMPATIBLE_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_COMPATIBLE_STATUS",
+        "desc": "Reference taxonomy: TAB_COMPATIBLE_STATUS",
         "columns": [
           {
             "name": "ORGS_CODE",
@@ -11359,7 +11359,7 @@
         "label": "TAB_CONTACT_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Types de contacts (Officiel, Vote, Finance)",
+        "desc": "Official contact types (Official, Voting, Billing)",
         "columns": [
           {
             "name": "CONT_CODE",
@@ -11396,7 +11396,7 @@
         "label": "TAB_COUNTRY",
         "domain": "referentials",
         "role": "master",
-        "desc": "Référentiel des pays ISO, régions, appartenance UE / CEPT / EFTA",
+        "desc": "ISO country codes, regions, EU / CEPT / EFTA membership flags",
         "columns": [
           {
             "name": "CTY_CODE",
@@ -11549,7 +11549,7 @@
         "label": "TAB_CTY_REGION",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_CTY_REGION",
+        "desc": "Reference taxonomy: TAB_CTY_REGION",
         "columns": [
           {
             "name": "CTY_CODE",
@@ -11583,7 +11583,7 @@
         "label": "TAB_CTY_VOT_WEIGHT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_CTY_VOT_WEIGHT",
+        "desc": "Reference taxonomy: TAB_CTY_VOT_WEIGHT",
         "columns": [
           {
             "name": "CTY_CODE",
@@ -11605,7 +11605,7 @@
         "label": "TAB_DEPARTMENT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_DEPARTMENT",
+        "desc": "Reference taxonomy: TAB_DEPARTMENT",
         "columns": [
           {
             "name": "DEPT_CODE",
@@ -11638,7 +11638,7 @@
         "label": "TAB_EQUIPMENT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_EQUIPMENT",
+        "desc": "Reference taxonomy: TAB_EQUIPMENT",
         "columns": [
           {
             "name": "EQUIPMENT_ID",
@@ -11696,7 +11696,7 @@
         "label": "TAB_EQUIPMENT_SECTION",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_EQUIPMENT_SECTION",
+        "desc": "Reference taxonomy: TAB_EQUIPMENT_SECTION",
         "columns": [
           {
             "name": "SECTION_ID",
@@ -11719,7 +11719,7 @@
         "label": "TAB_GENERAL_REMARK_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_GENERAL_REMARK_TYPE",
+        "desc": "Reference taxonomy: TAB_GENERAL_REMARK_TYPE",
         "columns": [
           {
             "name": "REMARK_KEY",
@@ -11760,7 +11760,7 @@
         "label": "TAB_JOB",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_JOB",
+        "desc": "Reference taxonomy: TAB_JOB",
         "columns": [
           {
             "name": "JOB_CODE",
@@ -11798,7 +11798,7 @@
         "label": "TAB_JOB_TITLES",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_JOB_TITLES",
+        "desc": "Reference taxonomy: TAB_JOB_TITLES",
         "columns": [
           {
             "name": "id",
@@ -11824,7 +11824,7 @@
         "label": "TAB_LINK_CODE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_LINK_CODE",
+        "desc": "Reference taxonomy: TAB_LINK_CODE",
         "columns": [
           {
             "name": "LINK_CODE",
@@ -11853,7 +11853,7 @@
         "label": "TAB_MEMBERSHIP",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MEMBERSHIP",
+        "desc": "Reference taxonomy: TAB_MEMBERSHIP",
         "columns": [
           {
             "name": "ORGA_ID",
@@ -11887,7 +11887,7 @@
         "label": "TAB_MTG_ACTION_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MTG_ACTION_STATUS",
+        "desc": "Reference taxonomy: TAB_MTG_ACTION_STATUS",
         "columns": [
           {
             "name": "MTG_ACTION_STATUS",
@@ -11914,7 +11914,7 @@
         "label": "TAB_MTG_CATEG",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MTG_CATEG",
+        "desc": "Reference taxonomy: TAB_MTG_CATEG",
         "columns": [
           {
             "name": "MTG_CATEG_CODE",
@@ -11952,7 +11952,7 @@
         "label": "TAB_MTG_PAYMENT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MTG_PAYMENT",
+        "desc": "Reference taxonomy: TAB_MTG_PAYMENT",
         "columns": [
           {
             "name": "Id",
@@ -12010,7 +12010,7 @@
         "label": "TAB_MTG_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MTG_STATUS",
+        "desc": "Reference taxonomy: TAB_MTG_STATUS",
         "columns": [
           {
             "name": "MTGS_CODE",
@@ -12043,7 +12043,7 @@
         "label": "TAB_MTG_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_MTG_TYPE",
+        "desc": "Reference taxonomy: TAB_MTG_TYPE",
         "columns": [
           {
             "name": "MTG_TYPE_CODE",
@@ -12085,7 +12085,7 @@
         "label": "TAB_OFF",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_OFF",
+        "desc": "Reference taxonomy: TAB_OFF",
         "columns": [
           {
             "name": "OFF_CODE",
@@ -12118,7 +12118,7 @@
         "label": "TAB_OLIST_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_OLIST_STATUS",
+        "desc": "Reference taxonomy: TAB_OLIST_STATUS",
         "columns": [
           {
             "name": "OLISTS_CODE",
@@ -12151,7 +12151,7 @@
         "label": "TAB_OLIST_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_OLIST_TYPE",
+        "desc": "Reference taxonomy: TAB_OLIST_TYPE",
         "columns": [
           {
             "name": "OLIST_TYPE",
@@ -12184,7 +12184,7 @@
         "label": "TAB_ORGA_CATEG",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ORGA_CATEG",
+        "desc": "Reference taxonomy: TAB_ORGA_CATEG",
         "columns": [
           {
             "name": "ORGS_CODE",
@@ -12222,7 +12222,7 @@
         "label": "Tab_Orga_Group_Family",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Group_Family",
+        "desc": "Reference taxonomy: Tab_Orga_Group_Family",
         "columns": [
           {
             "name": "GroupFamilyCode",
@@ -12248,7 +12248,7 @@
         "label": "Tab_Orga_Group_Role",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Group_Role",
+        "desc": "Reference taxonomy: Tab_Orga_Group_Role",
         "columns": [
           {
             "name": "OrgaRoleCode",
@@ -12275,7 +12275,7 @@
         "label": "TAB_ORGA_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ORGA_STATUS",
+        "desc": "Reference taxonomy: TAB_ORGA_STATUS",
         "columns": [
           {
             "name": "ORGS_CODE",
@@ -12323,7 +12323,7 @@
         "label": "TAB_ORGA_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ORGA_TYPE",
+        "desc": "Reference taxonomy: TAB_ORGA_TYPE",
         "columns": [
           {
             "name": "ORGA_TYPE_ID",
@@ -12345,7 +12345,7 @@
         "label": "TAB_OWNERSHIP_LEVEL",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_OWNERSHIP_LEVEL",
+        "desc": "Reference taxonomy: TAB_OWNERSHIP_LEVEL",
         "columns": [
           {
             "name": "OWNERSHIP_LEVEL",
@@ -12378,7 +12378,7 @@
         "label": "TAB_PERS_ROLE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_PERS_ROLE",
+        "desc": "Reference taxonomy: TAB_PERS_ROLE",
         "columns": [
           {
             "name": "PERS_ROLE_CODE",
@@ -12430,7 +12430,7 @@
         "label": "TAB_PERS_TITL",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_PERS_TITL",
+        "desc": "Reference taxonomy: TAB_PERS_TITL",
         "columns": [
           {
             "name": "PERS_TITL",
@@ -12463,7 +12463,7 @@
         "label": "TAB_PLIST_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_PLIST_STATUS",
+        "desc": "Reference taxonomy: TAB_PLIST_STATUS",
         "columns": [
           {
             "name": "PLISTS_CODE",
@@ -12495,7 +12495,7 @@
         "label": "TAB_PLIST_TYPE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_PLIST_TYPE",
+        "desc": "Reference taxonomy: TAB_PLIST_TYPE",
         "columns": [
           {
             "name": "PLIST_TYPE",
@@ -12540,7 +12540,7 @@
         "label": "TAB_RESP_ROLE",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_RESP_ROLE",
+        "desc": "Reference taxonomy: TAB_RESP_ROLE",
         "columns": [
           {
             "name": "RESP_ROLE_CODE",
@@ -12573,7 +12573,7 @@
         "label": "TAB_ROOM_REQUEST_STATUS",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ROOM_REQUEST_STATUS",
+        "desc": "Reference taxonomy: TAB_ROOM_REQUEST_STATUS",
         "columns": [
           {
             "name": "ROOM_REQUEST_STATUS",
@@ -12606,7 +12606,7 @@
         "label": "TAB_TB_LOGS",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour TAB_TB",
+        "desc": "Audit log and change history for TAB_TB",
         "columns": [
           {
             "name": "TB_ID",
@@ -12797,7 +12797,7 @@
         "label": "TAB_TB_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_TB_OLD",
+        "desc": "Reference taxonomy: TAB_TB_OLD",
         "columns": [
           {
             "name": "TB_ID",
@@ -12963,7 +12963,7 @@
         "label": "TAB_TB_STATUS_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_TB_STATUS_OLD",
+        "desc": "Reference taxonomy: TAB_TB_STATUS_OLD",
         "columns": [
           {
             "name": "TBS_CODE",
@@ -12996,7 +12996,7 @@
         "label": "TAB_TB_TYPE_OLD",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_TB_TYPE_OLD",
+        "desc": "Reference taxonomy: TAB_TB_TYPE_OLD",
         "columns": [
           {
             "name": "TB_TYPE",
@@ -13034,7 +13034,7 @@
         "label": "TAB_TIMEZONES",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_TIMEZONES",
+        "desc": "Reference taxonomy: TAB_TIMEZONES",
         "columns": [
           {
             "name": "TimeZoneId",
@@ -13146,7 +13146,7 @@
         "label": "Tab_UoC",
         "domain": "referentials",
         "role": "master",
-        "desc": "Barème financier des Unités de Cotisation (UoC)",
+        "desc": "Unit of Contribution (UoC) financial fee scale",
         "columns": [
           {
             "name": "ClassOfContrib",
@@ -13202,7 +13202,7 @@
         "label": "TAB_WORLDREGION",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_WORLDREGION",
+        "desc": "Reference taxonomy: TAB_WORLDREGION",
         "columns": [
           {
             "name": "RegionId",
@@ -13238,7 +13238,7 @@
         "label": "TB_DESCENDANT",
         "domain": "technical_bodies",
         "role": "child",
-        "desc": "Hiérarchie ou profil d'organe technique: TB_DESCENDANT",
+        "desc": "Technical body hierarchy tree or profile: TB_DESCENDANT",
         "columns": [
           {
             "name": "TB_ID",
@@ -13257,7 +13257,7 @@
         "label": "TB_HISTORY",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour TB",
+        "desc": "Audit log and change history for TB",
         "columns": [
           {
             "name": "TB_ID",
@@ -13279,7 +13279,7 @@
         "label": "TB_MEETING_PROFILE",
         "domain": "technical_bodies",
         "role": "child",
-        "desc": "Hiérarchie ou profil d'organe technique: TB_MEETING_PROFILE",
+        "desc": "Technical body hierarchy tree or profile: TB_MEETING_PROFILE",
         "columns": [
           {
             "name": "PK_TB_MTG_PROFILE",
@@ -13326,7 +13326,7 @@
         "label": "TB_PROFILE_OLD",
         "domain": "technical_bodies",
         "role": "child",
-        "desc": "Paramètres de l'organe technique: TB_PROFILE_OLD",
+        "desc": "Technical body parameters: TB_PROFILE_OLD",
         "columns": [
           {
             "name": "Pk_TbProfile",
@@ -13349,7 +13349,7 @@
         "label": "TB_Stats",
         "domain": "technical_bodies",
         "role": "child",
-        "desc": "Paramètres de l'organe technique: TB_Stats",
+        "desc": "Technical body parameters: TB_Stats",
         "columns": [
           {
             "name": "ID",
@@ -13468,7 +13468,7 @@
         "label": "TELDIR_LOG",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour TELDIR_LOG",
+        "desc": "Audit log and change history for TELDIR_LOG",
         "columns": [
           {
             "name": "LOG_ID",
@@ -13496,7 +13496,7 @@
         "label": "TGPP_REP_ORGA_CONTACT",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: TGPP_REP_ORGA_CONTACT",
+        "desc": "Reference lookup table: TGPP_REP_ORGA_CONTACT",
         "columns": [
           {
             "name": "ID",
@@ -13530,7 +13530,7 @@
         "label": "VatValidationMask",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: VatValidationMask",
+        "desc": "Reference taxonomy: VatValidationMask",
         "columns": [
           {
             "name": "Id",
@@ -13553,7 +13553,7 @@
         "label": "VMS_USERS_DELETE",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour VMS_USERS_DELETE",
+        "desc": "Audit log and change history for VMS_USERS_DELETE",
         "columns": [
           {
             "name": "VMS_USER",
@@ -13590,7 +13590,7 @@
         "label": "WITHDRAWAL_REQUESTS",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: WITHDRAWAL_REQUESTS",
+        "desc": "Organization membership details: WITHDRAWAL_REQUESTS",
         "columns": [
           {
             "name": "ID",
@@ -13669,7 +13669,7 @@
         "label": "X_mtg_users_presence_rep_orgs_status_save20210414",
         "domain": "referentials",
         "role": "master",
-        "desc": "Table de référence ou support: X_mtg_users_presence_rep_orgs_status_save20210414",
+        "desc": "Reference lookup table: X_mtg_users_presence_rep_orgs_status_save20210414",
         "columns": [
           {
             "name": "FK_ORGS_CODE",
@@ -13705,7 +13705,7 @@
         "label": "Excess_Contribution",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Excess_Contribution",
+        "desc": "Organization membership details: Excess_Contribution",
         "columns": [
           {
             "name": "ID",
@@ -13727,7 +13727,7 @@
         "label": "Common_Field",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Common_Field",
+        "desc": "Reference taxonomy: Common_Field",
         "columns": [
           {
             "name": "Id",
@@ -13746,7 +13746,7 @@
         "label": "Email_Domain_Name",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Email_Domain_Name",
+        "desc": "Organization membership details: Email_Domain_Name",
         "columns": [
           {
             "name": "Id",
@@ -13779,7 +13779,7 @@
         "label": "Orga_Declaration",
         "domain": "organizations",
         "role": "tx",
-        "desc": "Déclarations de chiffre d'affaires (ECRT) pour le calcul de cotisation",
+        "desc": "Turnover declarations (ECRT) used to calculate annual contribution fee",
         "columns": [
           {
             "name": "Declaration_Id",
@@ -13834,7 +13834,7 @@
         "label": "ORGA_IN_LIST_TRANSITION",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: ORGA_IN_LIST_TRANSITION",
+        "desc": "Organization membership details: ORGA_IN_LIST_TRANSITION",
         "columns": [
           {
             "name": "ID",
@@ -13886,7 +13886,7 @@
         "label": "Orga_Status",
         "domain": "organizations",
         "role": "tx",
-        "desc": "Statut d'adhésion officiel, catégorie, classe contributive et droits de vote",
+        "desc": "Official membership status, category, contribution units (UoC) and voting weights",
         "columns": [
           {
             "name": "Id",
@@ -14002,7 +14002,7 @@
         "label": "OrgaContributionHistory",
         "domain": "audit_logs",
         "role": "log",
-        "desc": "Journal d'audit et historique pour OrgaContributionHistory",
+        "desc": "Audit log and change history for OrgaContributionHistory",
         "columns": [
           {
             "name": "StatusId",
@@ -14076,7 +14076,7 @@
         "label": "OrgaInListStatusIsg",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: OrgaInListStatusIsg",
+        "desc": "Organization membership details: OrgaInListStatusIsg",
         "columns": [
           {
             "name": "OrgaInListStatusIsgCode",
@@ -14110,7 +14110,7 @@
         "label": "Organisation_Address",
         "domain": "organizations",
         "role": "child",
-        "desc": "Adresses postales, sièges sociaux et adresses de facturation",
+        "desc": "Headquarters, billing (Sage) and shipping postal addresses",
         "columns": [
           {
             "name": "Address_id",
@@ -14195,7 +14195,7 @@
         "label": "Organisation_Corporate_OP",
         "domain": "organizations",
         "role": "child",
-        "desc": "Liaison groupes d'entreprises et partenaires organisationnels (OP)",
+        "desc": "Corporate groups and Organizational Partners (ARIB, ATIS, CCSA, TTA, TTC)",
         "columns": [
           {
             "name": "fk_organisation",
@@ -14216,7 +14216,7 @@
         "label": "Organisation_Credit_Notes",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Organisation_Credit_Notes",
+        "desc": "Organization membership details: Organisation_Credit_Notes",
         "columns": [
           {
             "name": "ID",
@@ -14243,7 +14243,7 @@
         "label": "Organisation_Email_Domain_Name",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Organisation_Email_Domain_Name",
+        "desc": "Organization membership details: Organisation_Email_Domain_Name",
         "columns": [
           {
             "name": "OrganisationId",
@@ -14278,7 +14278,7 @@
         "label": "Organisation_Person_Contact",
         "domain": "organizations",
         "role": "join",
-        "desc": "Mandats de représentation et contacts officiels d'organisations",
+        "desc": "Official contact roles and accredited delegate representation mandates",
         "columns": [
           {
             "name": "ID",
@@ -14336,7 +14336,7 @@
         "label": "Person_Representing_Organisation",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: Person_Representing_Organisation",
+        "desc": "Person profile metadata: Person_Representing_Organisation",
         "columns": [
           {
             "name": "ID",
@@ -14384,7 +14384,7 @@
         "label": "Tab_Corporate_OP",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Corporate_OP",
+        "desc": "Reference taxonomy: Tab_Corporate_OP",
         "columns": [
           {
             "name": "pk_Corporate_OP",
@@ -14408,7 +14408,7 @@
         "label": "Tab_Orga_Address_Type",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Address_Type",
+        "desc": "Reference taxonomy: Tab_Orga_Address_Type",
         "columns": [
           {
             "name": "Address_type_id",
@@ -14439,7 +14439,7 @@
         "label": "Tab_Orga_Category",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Category",
+        "desc": "Reference taxonomy: Tab_Orga_Category",
         "columns": [
           {
             "name": "OrgaCategoryCode",
@@ -14481,7 +14481,7 @@
         "label": "Tab_Orga_Declaration_Family",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Declaration_Family",
+        "desc": "Reference taxonomy: Tab_Orga_Declaration_Family",
         "columns": [
           {
             "name": "Declaration_Family_Code",
@@ -14512,7 +14512,7 @@
         "label": "Tab_Orga_Declaration_Source",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Declaration_Source",
+        "desc": "Reference taxonomy: Tab_Orga_Declaration_Source",
         "columns": [
           {
             "name": "Declaration_Source_Code",
@@ -14549,7 +14549,7 @@
         "label": "Tab_Orga_Declaration_Type",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Declaration_Type",
+        "desc": "Reference taxonomy: Tab_Orga_Declaration_Type",
         "columns": [
           {
             "name": "Declaration_Type_Id",
@@ -14592,7 +14592,7 @@
         "label": "TAB_ORGA_IN_LIST_TRANSITION_REASON",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: TAB_ORGA_IN_LIST_TRANSITION_REASON",
+        "desc": "Reference taxonomy: TAB_ORGA_IN_LIST_TRANSITION_REASON",
         "columns": [
           {
             "name": "Transition_Reason_Code",
@@ -14625,7 +14625,7 @@
         "label": "Tab_Orga_Status",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Status",
+        "desc": "Reference taxonomy: Tab_Orga_Status",
         "columns": [
           {
             "name": "OrgaStatusCode",
@@ -14670,7 +14670,7 @@
         "label": "Tab_Orga_Status_Family",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Status_Family",
+        "desc": "Reference taxonomy: Tab_Orga_Status_Family",
         "columns": [
           {
             "name": "OrgaStatusFamilyCode",
@@ -14706,7 +14706,7 @@
         "label": "Tab_Orga_Status_Reason",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Status_Reason",
+        "desc": "Reference taxonomy: Tab_Orga_Status_Reason",
         "columns": [
           {
             "name": "OrgaStatusReasonCode",
@@ -14743,7 +14743,7 @@
         "label": "Tab_Orga_Withdrawal_Reason",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Orga_Withdrawal_Reason",
+        "desc": "Reference taxonomy: Tab_Orga_Withdrawal_Reason",
         "columns": [
           {
             "name": "Id",
@@ -14779,7 +14779,7 @@
         "label": "Tab_Representing_Context",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Representing_Context",
+        "desc": "Reference taxonomy: Tab_Representing_Context",
         "columns": [
           {
             "name": "Code",
@@ -14812,7 +14812,7 @@
         "label": "Person_Remarks",
         "domain": "persons",
         "role": "child",
-        "desc": "Données complémentaires sur les personnes: Person_Remarks",
+        "desc": "Person profile metadata: Person_Remarks",
         "columns": [
           {
             "name": "Remark_Id",
@@ -14858,7 +14858,7 @@
         "label": "Tab_Person_Remarks_Source",
         "domain": "referentials",
         "role": "master",
-        "desc": "Nomenclature de référence: Tab_Person_Remarks_Source",
+        "desc": "Reference taxonomy: Tab_Person_Remarks_Source",
         "columns": [
           {
             "name": "Remark_Source_Code",
@@ -14889,7 +14889,7 @@
         "label": "Sharing_Data",
         "domain": "organizations",
         "role": "child",
-        "desc": "Données d'adhésion de l'organisation: Sharing_Data",
+        "desc": "Organization membership details: Sharing_Data",
         "columns": [
           {
             "name": "Id",
@@ -14923,7 +14923,7 @@
         "label": "WORK_ITEM",
         "domain": "work_programme",
         "role": "hub",
-        "desc": "Spécifications et normes techniques (TS, TR, EN, ES, GS)",
+        "desc": "Technical specifications and European standards (TS, TR, EN, ES, GS)",
         "columns": [
           {
             "name": "WKI_ID",
